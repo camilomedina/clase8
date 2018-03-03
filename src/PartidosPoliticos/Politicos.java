@@ -23,4 +23,12 @@ public class Politicos {
        this.voto=_voto;
 
     }
+    public void setVoto(int _voto){
+        this.voto=_voto;
+                
+    }
+    public int getVoto(){
+        return this.voto;
+    }
+    
 }
