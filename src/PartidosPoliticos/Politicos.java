@@ -14,10 +14,24 @@ public class Politicos {
     public String nombre;
     public String apellido;
     public int documento;
-    public byte edad;
+    public int edad;
     public BigDecimal telefono;
+    private String direccion;
+    private String ciudadNacimiento;
+    public String partidoPolitico;
     
     public Politicos(){
     
+    }
+    public Politicos(String nombre,String apellido,int documento,int edad,BigDecimal telefono,String direccion,String ciudadNacimiento,String partidoPolitico){
+       this();
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.documento=documento;
+        this.edad=edad;
+        this.telefono=telefono;
+        this.direccion=direccion;
+        this.ciudadNacimiento=ciudadNacimiento;
+        this.partidoPolitico=partidoPolitico;
     }
 }
