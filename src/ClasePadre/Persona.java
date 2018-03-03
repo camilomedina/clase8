@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package ClasePadre;
-
 import java.math.BigDecimal;
+import PartidosPoliticos.Politicos;
 
 /**
  *
@@ -19,8 +19,13 @@ public class Persona extends Politicos{
     private BigDecimal telefono;
     private String direccion;
     private String ciudadNacimiento;
+    static public int valorPolo=(2_000_000_000);  
+    static public int valorLiberal=(2_000_000_000);
+    static public int valorVerde=(1_000_000_000);
+    static public int valorMira=(500_000_000);
     //Constructor Clase Hija
-    Persona(String _nombre,String _apellido,int _documento,int _edad,BigDecimal _telefono,String _direccion,String _ciudadNacimiento,String _partidoPolitico){
+    public Persona(String _nombre,String _apellido,int _documento,int _edad,BigDecimal _telefono,String _direccion,String _ciudadNacimiento,String _partidoPolitico,int _voto){
+        super(_partidoPolitico,_voto);
         this.nombre=_nombre;
         this.apellido=_apellido;
         this.documento=_documento;
@@ -77,5 +82,22 @@ public class Persona extends Politicos{
     }
     public String getCiudad(){
         return this.ciudadNacimiento;
+    }
+    //Metodos aparte de las variables
+    static public int sumaPolo(int publicidad){
+        valorPolo=valorPolo+publicidad;
+        return valorPolo;
+    }
+    static public int sumaLiberal(int publicidad){
+        valorLiberal=valorLiberal+publicidad;
+        return valorLiberal;
+    }
+    static public int sumaVerde(int publicidad){
+        valorVerde=valorVerde+publicidad;
+        return valorVerde;
+    }
+    static public int sumaMira(int publicidad){
+        valorMira=valorMira+publicidad;
+        return valorMira;
     }
 }
