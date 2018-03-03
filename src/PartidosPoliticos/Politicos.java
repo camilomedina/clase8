@@ -23,4 +23,8 @@ public class Politicos {
        this.voto=_voto;
 
     }
+    public String getNombre(){
+        return
+    }
+    
 }
