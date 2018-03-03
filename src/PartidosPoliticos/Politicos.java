@@ -10,16 +10,15 @@ package PartidosPoliticos;
  * @author Familia Díaz Rendón
  */
 public class Politicos {
-
-    private String partidoPolitico;
-    private double valorCampaña;
-    private int voto;
-    public Politicos(){
     
-    }
-    Politicos(String _partidoPolitico,double _valorCampaña, int _voto){
+   
+    private String partidoPolitico;
+    private int voto;
+    
+    
+    
+    public Politicos(String _partidoPolitico, int _voto){
        this.partidoPolitico=_partidoPolitico;
-       this.valorCampaña=_valorCampaña;
        this.voto=_voto;
 
     }
@@ -31,12 +30,6 @@ public class Politicos {
         return this.partidoPolitico;
     }
     
-    public void setvalorCampaña(double _valorCampaña){
-        this.valorCampaña=_valorCampaña;
-    }
-    public double getvalorCampaña(){
-        return this.valorCampaña;
-    }
     
     public void setVoto(int _voto){
         this.voto=_voto;

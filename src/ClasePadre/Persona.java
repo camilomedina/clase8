@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package ClasePadre;
-
 import java.math.BigDecimal;
+import PartidosPoliticos.Politicos;
 
 /**
  *
@@ -19,8 +19,13 @@ public class Persona extends Politicos{
     private BigDecimal telefono;
     private String direccion;
     private String ciudadNacimiento;
+    static public BigDecimal valorPolo= new BigDecimal (2_000_000_000);  
+    static public BigDecimal valorLiberal=new BigDecimal(2_000_000_000);
+    static public  BigDecimal valorVerde=new BigDecimal(1_000_000_000);
+    static public   BigDecimal valorMira=new BigDecimal(500_000_000);
     //Constructor Clase Hija
-    Persona(String _nombre,String _apellido,int _documento,int _edad,BigDecimal _telefono,String _direccion,String _ciudadNacimiento,String _partidoPolitico){
+    public Persona(String _nombre,String _apellido,int _documento,int _edad,BigDecimal _telefono,String _direccion,String _ciudadNacimiento,String _partidoPolitico,int _voto){
+        super(_partidoPolitico,_voto);
         this.nombre=_nombre;
         this.apellido=_apellido;
         this.documento=_documento;
