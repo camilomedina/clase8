@@ -21,7 +21,7 @@ public class Main {
         
         Scanner dato = new Scanner(System.in);
         
-        BigDecimal numTelefono = new BigDecimal("3045809796");
+        /*BigDecimal numTelefono = new BigDecimal("3045809796");
         Politicos polo1= new Politicos("Juan", "Benitez", 123456789,33, numTelefono,"carrera 15 #20-02","Bogota","Polo");
         BigDecimal numTelefono2 = new BigDecimal("3223123241");
         Politicos polo2= new Politicos("Camilo", "Medina", 234567890, 24, numTelefono2,"calle 40 #13-22","Tolima","Polo");
@@ -38,7 +38,7 @@ public class Main {
         BigDecimal numTelefono8 = new BigDecimal("3983772212");
         Politicos mira1= new Politicos("Amparo", "Grisales", 89012345, 50, numTelefono8,"av cali #6-22","Cali","Polo");
         BigDecimal numTelefono9 = new BigDecimal("3736363612");
-        Politicos mira2= new Politicos("Bob", "Marley", 90123456, 52, numTelefono9,"vereda el charquito" ,"Bucaramanga","Polo");
+        Politicos mira2= new Politicos("Bob", "Marley", 90123456, 52, numTelefono9,"vereda el charquito" ,"Bucaramanga","Polo");*/
         
         int menu;
         System.out.println("_______________________________");
