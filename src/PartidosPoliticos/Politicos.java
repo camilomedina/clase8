@@ -22,6 +22,7 @@ public class Politicos {
        this.voto=_voto;
 
     }
+    //*************PartidoPolitico
     public void setpartidoPolitico(String _partidoPolitico){
         this.partidoPolitico=_partidoPolitico;
     }
@@ -30,12 +31,13 @@ public class Politicos {
         return this.partidoPolitico;
     }
     
-    
+    //*************voto
     public void setVoto(int _voto){
         this.voto=_voto;
                 
     }
-    public int getVoto(){
+    public int getVoto(int congreso1){
+        this.voto=this.voto+congreso1;
         return this.voto;
     }
     
