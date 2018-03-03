@@ -23,6 +23,21 @@ public class Politicos {
        this.voto=_voto;
 
     }
+    public void setpartidoPolitico(String _partidoPolitico){
+        this.partidoPolitico=_partidoPolitico;
+    }
+    
+    public String getpartidoPolitico(){
+        return this.partidoPolitico;
+    }
+    
+    public void setvalorCampaña(double _valorCampaña){
+        this.valorCampaña=_valorCampaña;
+    }
+    public double getvalorCampaña(){
+        return this.valorCampaña;
+    }
+    
     public void setVoto(int _voto){
         this.voto=_voto;
                 
