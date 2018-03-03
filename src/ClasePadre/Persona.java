@@ -58,22 +58,22 @@ public class Persona extends Politicos{
         return this.edad;
     }
      //*****************Telefono**************
-    public void setTelefono(){
-        
+    public void setTelefono(BigDecimal _telefono){
+        this.telefono=_telefono;
     }
     public BigDecimal getTelefono(){
         return this.telefono;
     }
      //*****************Direccion**************
-    public void setDireccion(){
-        
+    public void setDireccion(String _direccion){
+        this.direccion=_direccion;
     }
     public String getDireccion(){
         return this.direccion;
     }
      //*****************CiudadNacimiento**************
-    public void setCiudad(){
-        
+    public void setCiudad(String _ciudadNacimiento){
+        this.ciudadNacimiento=_ciudadNacimiento;
     }
     public String getCiudad(){
         return this.ciudadNacimiento;
