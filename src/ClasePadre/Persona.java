@@ -9,17 +9,19 @@ import PartidosPoliticos.Politicos;
 
 /**
  *
- * @author Familia Díaz Rendón
+ * @author Christian Diaz y Camilo Medina
  */
 public class Persona extends Politicos{
+    //datos de los politicos 
     private String nombre;//Nombre de la persona
-    private String apellido;//
+    private String apellido;//Apellido del candito
     private int documento;
     private int edad;
     private BigDecimal telefono;
     private String direccion;
     private String ciudadNacimiento;
-    static public int valorPolo=(2_000_000_000);  
+    //costo definido de la campaña 
+    static public int valorPolo=(2_000_000_000);
     static public int valorLiberal=(2_000_000_000);
     static public int valorVerde=(1_000_000_000);
     static public int valorMira=(500_000_000);
@@ -88,14 +90,17 @@ public class Persona extends Politicos{
         valorPolo=valorPolo+publicidad;
         return valorPolo;
     }
+    //metodo de suma de campaña+votos
     static public int sumaLiberal(int publicidad){
         valorLiberal=valorLiberal+publicidad;
         return valorLiberal;
     }
+    //metodo de suma de campaña+votos
     static public int sumaVerde(int publicidad){
         valorVerde=valorVerde+publicidad;
         return valorVerde;
     }
+    //metodo de suma de campaña+votos
     static public int sumaMira(int publicidad){
         valorMira=valorMira+publicidad;
         return valorMira;

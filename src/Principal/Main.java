@@ -10,7 +10,7 @@ import ClasePadre.Persona;
 import java.math.BigDecimal;
 /**
  *
- * @author Familia Díaz Rendón
+ * @author Christian Diaz y Camilo Medina
  */
 
 public class Main {
@@ -21,7 +21,9 @@ public class Main {
     public static void main(String[] args) {
         
         Scanner dato = new Scanner(System.in);
+        //variables 
         byte influencia;
+        //variables de precio acumulados dependiendo el voto a las campañas politicas
         int tele=200_000;
         int radio=150_000;
         int internet=10_000;
@@ -46,6 +48,7 @@ public class Main {
         Persona mira2= new Persona("Bob", "Marley", 90123456, 52, numTelefono9,"vereda el charquito" ,"Bucaramanga","Polo",0);
         
         do{
+            //menu principal de opciones
         byte menu;
         System.out.println("_______________________________");
         System.out.println("1.Informacion Electoral");
@@ -54,6 +57,7 @@ public class Main {
         System.out.println("_______________________________");
         menu=dato.nextByte();
         while(menu<=0 || menu>3){
+            //ciclo para validacion de datos ingresados, sean correctos
         System.out.println("_______________________________");
         System.out.println("1.Informacion Electoral");
         System.out.println("2.Votar");
@@ -63,6 +67,7 @@ public class Main {
         }
         switch(menu){
             case 1:
+                //impresion por pantalla de los datos de los politicos y tambien de sus partidos correspondientes
                 System.out.println("_____________________________________________________________________");
                 System.out.println("                  Total Votos                                ");
                 System.out.println("_____________________________________________________________________");
@@ -78,6 +83,7 @@ public class Main {
                 System.out.println("______________________________________________________________________");
                 System.out.println("              Por partido Politico");
                 System.out.println("______________________________________________________________________");
+                //lamado a get referente a cada partido politico por voto
                 int votosPolo=polo1.getVoto(0)+polo2.getVoto(0)+polo3.getVoto(0);
                 int votosLiberal=liberal1.getVoto(0)+liberal2.getVoto(0);
                 int votosVerde=verde1.getVoto(0)+verde2.getVoto(0);
@@ -91,6 +97,7 @@ public class Main {
                 break;
                 //***************************************************************
             case 2:
+                //votacion por teclado de cantidatos segun la opcion.
                 short pregunta;
                 System.out.println("_____________________________________________________________________");
                 System.out.println("                Vote por los representantes                           ");
@@ -106,6 +113,7 @@ public class Main {
                 System.out.println("9=Nombre: "+mira2.getNombre()+" Apellido "+mira2.getApellido()+" Edad: "+mira2.getEdad());
                 pregunta=dato.nextShort();
                 while(pregunta<=0 && pregunta>9){
+                    //para volver a pedir un valor si este es erroneo
                 System.out.println("_____________________________________________________________________");
                 System.out.println("                Vote por los representantes                           ");
                 System.out.println("_____________________________________________________________________");
@@ -122,6 +130,7 @@ public class Main {
                 }
                 switch(pregunta){
                     case 1:
+                        //segun el tipo de la publicidad
                         int congreso1=0;
                         congreso1++;
                         System.out.println("________________________________________________________");
@@ -131,6 +140,7 @@ public class Main {
                         System.out.println("2.Voto influenciado por publicidad en Radio");
                         System.out.println("3.Voto influenciado por publicidad en Internet");
                         System.out.println("________________________________________________________");
+                        //el voto se acumula y se va sumando segun la cantidad de votos a este candidato
                         polo1.getVoto(congreso1);
                         influencia = dato.nextByte();
                         while(influencia<=0 && influencia>3 ){
@@ -142,6 +152,7 @@ public class Main {
                             System.out.println("3.Voto influenciado por publicidad en Internet");
                             System.out.println("________________________________________________________");
                         }
+                        //metodos para el precio de la campaña total
                         if (influencia==1){
                             Persona.sumaPolo(tele);
                         }
@@ -166,6 +177,7 @@ public class Main {
                         System.out.println("2.Voto influenciado por publicidad en Radio");
                         System.out.println("3.Voto influenciado por publicidad en Internet");
                         System.out.println("________________________________________________________");
+                        //el voto se acumula y se va sumando segun la cantidad de votos a este candidato
                         polo2.getVoto(congreso2);
                         influencia = dato.nextByte();
                         while(influencia<=0 && influencia>3 ){
@@ -177,6 +189,7 @@ public class Main {
                             System.out.println("3.Voto influenciado por publicidad en Internet");
                             System.out.println("________________________________________________________");
                         }
+                        //metodos para el precio de la campaña total
                          if (influencia==1){
                             Persona.sumaPolo(tele);
                         }
@@ -200,6 +213,7 @@ public class Main {
                         System.out.println("2.Voto influenciado por publicidad en Radio");
                         System.out.println("3.Voto influenciado por publicidad en Internet");
                         System.out.println("________________________________________________________");
+                        //el voto se acumula y se va sumando segun la cantidad de votos a este candidato
                         polo3.getVoto(congreso3);
                         influencia = dato.nextByte();
                         while(influencia<=0 && influencia>3 ){
@@ -211,6 +225,7 @@ public class Main {
                             System.out.println("3.Voto influenciado por publicidad en Internet");
                             System.out.println("________________________________________________________");
                         }
+                        //metodos para el precio de la campaña total
                           if (influencia==1){
                             Persona.sumaPolo(tele);
                         }
@@ -234,6 +249,7 @@ public class Main {
                         System.out.println("2.Voto influenciado por publicidad en Radio");
                         System.out.println("3.Voto influenciado por publicidad en Internet");
                         System.out.println("________________________________________________________");
+                        //el voto se acumula y se va sumando segun la cantidad de votos a este candidato
                         liberal1.getVoto(congreso4);
                         influencia = dato.nextByte();
                         while(influencia<=0 && influencia>3 ){
@@ -268,6 +284,7 @@ public class Main {
                         System.out.println("2.Voto influenciado por publicidad en Radio");
                         System.out.println("3.Voto influenciado por publicidad en Internet");
                         System.out.println("________________________________________________________");
+                        //el voto se acumula y se va sumando segun la cantidad de votos a este candidato
                         liberal2.getVoto(congreso5);
                         influencia = dato.nextByte();
                         while(influencia<=0 && influencia>3 ){
@@ -302,6 +319,7 @@ public class Main {
                         System.out.println("2.Voto influenciado por publicidad en Radio");
                         System.out.println("3.Voto influenciado por publicidad en Internet");
                         System.out.println("________________________________________________________");
+                        //el voto se acumula y se va sumando segun la cantidad de votos a este candidato
                         verde1.getVoto(congreso6);
                         influencia = dato.nextByte();
                         while(influencia<=0 && influencia>3 ){
@@ -347,6 +365,7 @@ public class Main {
                             System.out.println("3.Voto influenciado por publicidad en Internet");
                             System.out.println("________________________________________________________");
                         }
+                        //metodos para el precio de la campaña total
                        if (influencia==1){
                             Persona.sumaVerde(tele);
                         }
@@ -381,6 +400,7 @@ public class Main {
                             System.out.println("3.Voto influenciado por publicidad en Internet");
                             System.out.println("________________________________________________________");
                         }
+                        //metodos para el precio de la campaña total
                         if (influencia==1){
                             Persona.sumaMira(tele);
                         }
@@ -433,6 +453,7 @@ public class Main {
                 break;
                 //**********************************++
             case 3:
+                //costo de la campaña + los votos en precio correspondiente
                 System.out.println("____________________________________________________________");
                 System.out.println("                   Costo de las Campañas " );
                 System.out.println("____________________________________________________________");

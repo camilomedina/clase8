@@ -7,7 +7,7 @@ package PartidosPoliticos;
 
 /**
  *
- * @author Familia Díaz Rendón
+ * @author Christian Diaz, Camilo Medina
  */
 public class Politicos {
     
@@ -36,6 +36,7 @@ public class Politicos {
         this.voto=_voto;
                 
     }
+    //acumulado de votos
     public int getVoto(int congreso1){
         this.voto=this.voto+congreso1;
         return this.voto;
